@@ -1,0 +1,511 @@
+.department-page {
+  width: 100%;
+}
+
+.department-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.department-eyebrow {
+  margin: 0 0 6px;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.department-header h1 {
+  margin: 0;
+  color: var(--text);
+  font-size: 29px;
+}
+
+.department-header p:not(.department-eyebrow) {
+  margin: 7px 0 0;
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+.add-department-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 9px;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-department-btn:hover {
+  opacity: 0.9;
+}
+
+/* Statistics */
+
+.department-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.department-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface);
+}
+
+.department-stat-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+}
+
+.department-stat-icon.blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.department-stat-icon.purple {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.department-stat-icon.green {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+.department-stat-card span {
+  display: block;
+  color: var(--text-light);
+  font-size: 11px;
+}
+
+.department-stat-card strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--text);
+  font-size: 22px;
+}
+
+/* Main Card */
+
+.department-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.department-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 19px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.department-toolbar h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.department-toolbar p {
+  margin: 4px 0 0;
+  color: var(--text-light);
+  font-size: 11px;
+}
+
+.department-search {
+  position: relative;
+  width: 310px;
+}
+
+.department-search svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+}
+
+.department-search input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px 10px 38px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  outline: none;
+  background: var(--background);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.department-search input:focus {
+  border-color: var(--primary);
+}
+
+/* Table */
+
+.department-table-wrapper {
+  overflow-x: auto;
+}
+
+.department-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 950px;
+}
+
+.department-table th {
+  padding: 13px 18px;
+  background: var(--background);
+  color: var(--text-light);
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.department-table td {
+  padding: 14px 18px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light);
+  font-size: 12px;
+}
+
+.department-table tbody tr:hover {
+  background: var(--background);
+}
+
+.department-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 240px;
+}
+
+.department-avatar {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #eff6ff;
+  color: var(--primary);
+}
+
+.department-name-cell strong {
+  display: block;
+  color: var(--text);
+  font-size: 12px;
+}
+
+.department-name-cell span {
+  display: block;
+  margin-top: 3px;
+  color: var(--text-light);
+  font-size: 9px;
+}
+
+.department-code {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: var(--background);
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.hod-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.hod-avatar {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f5f3ff;
+  color: #7c3aed;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.department-table td > strong {
+  color: var(--text);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 9px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.status-badge span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status-badge.active {
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.status-badge.active span {
+  background: #22c55e;
+}
+
+.status-badge.inactive {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.status-badge.inactive span {
+  background: #ef4444;
+}
+
+.department-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.action-btn.edit {
+  color: var(--primary);
+}
+
+.action-btn.delete {
+  color: #dc2626;
+}
+
+.action-btn:hover {
+  background: var(--background);
+}
+
+/* Empty */
+
+.empty-departments {
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--text-light);
+}
+
+.empty-departments svg {
+  opacity: 0.45;
+}
+
+.empty-departments h3 {
+  margin: 12px 0 5px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.empty-departments p {
+  margin: 0;
+  font-size: 11px;
+}
+
+/* Modal */
+
+.department-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.department-modal {
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.department-modal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.department-modal-header h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.department-modal-header p {
+  margin: 5px 0 0;
+  color: var(--text-light);
+  font-size: 11px;
+}
+
+.modal-close {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.department-form {
+  padding: 20px;
+}
+
+.department-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+}
+
+.department-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.department-field.full {
+  grid-column: 1 / -1;
+}
+
+.department-field label {
+  color: var(--text);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.department-field input,
+.department-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  background: var(--background);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.department-field input:focus,
+.department-field select:focus {
+  border-color: var(--primary);
+}
+
+.department-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  margin-top: 23px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.modal-cancel,
+.modal-save {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-cancel {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.modal-save {
+  border: none;
+  background: var(--primary);
+  color: white;
+}
+
+@media (max-width: 750px) {
+  .department-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .add-department-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .department-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .department-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .department-search {
+    width: 100%;
+  }
+
+  .department-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .department-field.full {
+    grid-column: auto;
+  }
+}

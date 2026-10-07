@@ -1,0 +1,261 @@
+.hod-settings {
+  padding: 28px;
+}
+
+.settings-header {
+  margin-bottom: 25px;
+}
+
+.settings-eyebrow {
+  margin: 0 0 7px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+}
+
+.settings-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #111827;
+}
+
+.settings-header p:not(.settings-eyebrow) {
+  margin: 8px 0 0;
+  color: #6b7280;
+}
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+}
+
+.settings-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 20px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.settings-card-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.settings-card-header h2 {
+  margin: 0;
+  font-size: 17px;
+  color: #111827;
+}
+
+.settings-card-header p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.settings-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 22px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.settings-field.full {
+  grid-column: 1 / -1;
+}
+
+.settings-field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.settings-field input,
+.settings-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  outline: none;
+  background: white;
+  color: #374151;
+}
+
+.settings-field input:focus,
+.settings-field select:focus {
+  border-color: #2563eb;
+}
+
+.settings-input-icon {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  color: #9ca3af;
+}
+
+.settings-input-icon input {
+  border: none;
+  padding-left: 0;
+}
+
+.settings-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+}
+
+.settings-actions button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: 9px;
+  padding: 11px 17px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.settings-options {
+  padding: 5px 20px 12px;
+}
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.settings-option:last-child {
+  border-bottom: none;
+}
+
+.settings-option strong {
+  display: block;
+  color: #111827;
+  font-size: 14px;
+}
+
+.settings-option span {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.toggle {
+  width: 42px;
+  height: 23px;
+  padding: 3px;
+  border: none;
+  border-radius: 20px;
+  background: #d1d5db;
+  cursor: pointer;
+}
+
+.toggle span {
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s;
+}
+
+.toggle.on {
+  background: #2563eb;
+}
+
+.toggle.on span {
+  transform: translateX(19px);
+}
+
+.security-card {
+  grid-column: 1 / -1;
+}
+
+.security-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 22px;
+}
+
+.security-info strong {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.security-info span {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.security-info .access-active {
+  color: #16a34a;
+}
+
+@media (max-width: 900px) {
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .security-card {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hod-settings {
+    padding: 18px;
+  }
+
+  .settings-form {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-field.full {
+    grid-column: auto;
+  }
+
+  .settings-actions {
+    grid-column: auto;
+  }
+
+  .security-info {
+    grid-template-columns: 1fr;
+  }
+}

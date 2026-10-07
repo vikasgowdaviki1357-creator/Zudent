@@ -1,0 +1,145 @@
+.btn {
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    font-weight:600;
+
+    box-shadow:var(--shadow-sm);
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-md);
+}
+
+.btn:active{
+
+    transform:scale(.98);
+}
+
+.btn:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+/* Primary */
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+}
+
+/* Secondary */
+
+.btn-secondary{
+
+    background:white;
+
+    color:var(--primary);
+
+    border:1px solid var(--border);
+}
+
+/* Success */
+
+.btn-success{
+
+    background:var(--success);
+
+    color:white;
+}
+
+/* Danger */
+
+.btn-danger{
+
+    background:var(--danger);
+
+    color:white;
+}
+
+/* Warning */
+
+.btn-warning{
+
+    background:var(--warning);
+
+    color:white;
+}
+
+/* Sizes */
+
+.btn-sm{
+
+    padding:8px 14px;
+
+    font-size:13px;
+}
+
+.btn-md{
+
+    padding:12px 20px;
+
+    font-size:15px;
+}
+
+.btn-lg{
+
+    padding:15px 28px;
+
+    font-size:16px;
+}
+
+.btn-full{
+
+    width:100%;
+}
+
+/* Spinner */
+
+.btn-spinner{
+
+    width:16px;
+    height:16px;
+
+    border:2px solid rgba(255,255,255,.3);
+
+    border-top:2px solid white;
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+    }
+}

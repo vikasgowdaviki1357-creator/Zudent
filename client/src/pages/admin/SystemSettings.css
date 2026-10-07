@@ -1,0 +1,496 @@
+.settings-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.settings-eyebrow {
+  margin: 0 0 6px;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.settings-header h1 {
+  margin: 0;
+  color: var(--text);
+  font-size: 29px;
+  font-weight: 700;
+}
+
+.settings-header p:not(.settings-eyebrow) {
+  margin: 7px 0 0;
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+/* ================================
+   SAVE BUTTON
+================================ */
+
+.settings-save-top,
+.settings-save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 9px;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.settings-save-top {
+  padding: 11px 16px;
+}
+
+.settings-save-top:hover,
+.settings-save:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.settings-save-top:active,
+.settings-save:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   SUCCESS MESSAGE
+================================ */
+
+.settings-success {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.settings-success span {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 11px;
+}
+
+/* ================================
+   SETTINGS CARD
+================================ */
+
+.settings-card {
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+/* ================================
+   CARD HEADER
+================================ */
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-section-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: var(--primary);
+}
+
+.settings-card-header h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.settings-card-header p {
+  margin: 4px 0 0;
+  color: var(--text-light);
+  font-size: 11px;
+}
+
+/* ================================
+   FORM GRID
+================================ */
+
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 22px 20px;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.settings-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.settings-field label {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.settings-field input,
+.settings-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  outline: none;
+  background: var(--background);
+  color: var(--text);
+  font-size: 13px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-field input::placeholder {
+  color: var(--text-light);
+}
+
+.settings-field input:focus,
+.settings-field select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.08);
+}
+
+/* ================================
+   INPUT WITH ICON
+================================ */
+
+.settings-input-icon {
+  position: relative;
+}
+
+.settings-input-icon svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+.settings-input-icon input {
+  padding-left: 39px;
+}
+
+/* ================================
+   SETTINGS OPTIONS
+================================ */
+
+.settings-options {
+  padding: 5px 20px;
+}
+
+/* ================================
+   TOGGLE ROW
+================================ */
+
+.settings-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 68px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.settings-toggle:hover {
+  background: var(--background);
+}
+
+.settings-toggle:last-child {
+  border-bottom: none;
+}
+
+/* Toggle Icon */
+
+.toggle-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--text-light);
+}
+
+/* Toggle Text */
+
+.toggle-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toggle-content strong {
+  display: block;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.toggle-content span {
+  display: block;
+  margin-top: 3px;
+  color: var(--text-light);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* Hide actual checkbox */
+
+.settings-toggle input {
+  display: none;
+}
+
+/* Toggle Switch */
+
+.toggle-switch {
+  position: relative;
+  width: 42px;
+  height: 23px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: #d1d5db;
+  transition: background 0.2s ease;
+}
+
+.toggle-switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Enabled */
+
+.settings-toggle input:checked + .toggle-switch {
+  background: var(--primary);
+}
+
+.settings-toggle input:checked + .toggle-switch::after {
+  transform: translateX(19px);
+}
+
+/* ================================
+   DANGER SETTING
+================================ */
+
+.danger-option .toggle-icon {
+  color: #dc2626;
+  background: #fef2f2;
+}
+
+.danger-option:hover {
+  background: #fffafa;
+}
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 4px 0 25px;
+}
+
+.settings-cancel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 18px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.settings-cancel:hover {
+  background: var(--background);
+}
+
+.settings-save {
+  padding: 11px 18px;
+  font-size: 13px;
+}
+
+/* ================================
+   DISABLED STATES
+================================ */
+
+.settings-save-top:disabled,
+.settings-save:disabled,
+.settings-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ================================
+   SELECT ARROW / OPTIONS
+================================ */
+
+.settings-field select {
+  cursor: pointer;
+}
+
+.settings-field select option {
+  background: var(--surface);
+  color: var(--text);
+}
+
+/* ================================
+   RESPONSIVE - TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .settings-page {
+    max-width: 100%;
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-field.full-width {
+    grid-column: auto;
+  }
+}
+
+/* ================================
+   RESPONSIVE - MOBILE
+================================ */
+
+@media (max-width: 700px) {
+  .settings-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .settings-save-top {
+    width: 100%;
+  }
+
+  .settings-card-header {
+    padding: 16px;
+  }
+
+  .settings-grid {
+    gap: 16px;
+    padding: 18px 16px;
+  }
+
+  .settings-options {
+    padding: 5px 16px;
+  }
+
+  .settings-actions {
+    padding-bottom: 20px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .settings-header h1 {
+    font-size: 25px;
+  }
+
+  .settings-header p:not(.settings-eyebrow) {
+    font-size: 12px;
+  }
+
+  .settings-card-header h2 {
+    font-size: 14px;
+  }
+
+  .settings-card-header p {
+    font-size: 10px;
+  }
+
+  .settings-toggle {
+    gap: 9px;
+  }
+
+  .toggle-content strong {
+    font-size: 11px;
+  }
+
+  .toggle-content span {
+    font-size: 9px;
+  }
+
+  .settings-actions {
+    flex-direction: column-reverse;
+  }
+
+  .settings-cancel,
+  .settings-save {
+    width: 100%;
+  }
+}
